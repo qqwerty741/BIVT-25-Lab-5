@@ -248,15 +248,6 @@ namespace Lab5
         {
             int n = matrix.GetLength(0), m = matrix.GetLength(1);
             if (n != m) return;
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < m; j++)
-                {
-                    Console.Write($"{matrix[i, j],3} ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine(k);
             // code here
             int mAbsI = 0, mAbsJ = 0;
             for (int i = 0; i < n; i++)
@@ -270,7 +261,6 @@ namespace Lab5
                     }
                 }
             }
-            Console.WriteLine($"{mAbsI, 3} {mAbsJ, 3}\n");
             if(mAbsI < k) // ...i....k...
             {
                 for(int i = mAbsI; i < k; i++)
@@ -293,7 +283,7 @@ namespace Lab5
             }
             if (mAbsJ < k) // ...i....k...
             {
-                for (int j = mAbsI; j < k; j++)
+                for (int j = mAbsJ; j < k; j++)
                 {
                     for (int i = 0; i < m; i++)
                     {
@@ -303,7 +293,7 @@ namespace Lab5
             }
             else
             {
-                for (int j = mAbsI; j > k; j--)
+                for (int j = mAbsJ; j > k; j--)
                 {
                     for (int i = 0; i < m; i++)
                     {
@@ -311,15 +301,6 @@ namespace Lab5
                     }
                 }
             }
-            for (int i = 0; i < n; i++)
-            {
-                for(int j = 0; j < m; j++)
-                {
-                    Console.Write($"{matrix[i,j], 3} ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine("--------------------");
             // end
 
         }
